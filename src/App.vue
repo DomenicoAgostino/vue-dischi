@@ -1,35 +1,23 @@
 <template>
-  <div>
-    <div class="container">ciao</div>
-  </div>
+<div>
+  <HeaderComponent />
+  <MainComponent />
+</div>
 </template>
 
 <script>
-import axios from 'axios';
+import HeaderComponent from './components/HeaderComponent.vue';
+import MainComponent from './components/MainComponent.vue';
+
+
 export default {
   name: 'App',
-  data() {
-      return {
-        baseURL: 'https://flynn.boolean.careers/exercises/api/array/music',
-      }
-  },
+  components: {
+    HeaderComponent,
+    MainComponent,
+},
 
-  component: {
-
-  },
-
-  mounted() {
-    this.getAPI()
-  },
-  methods:{
-    getAPI(){
-      axios.get(this.baseURL)
-      .then(r => {
-        console.log(r.data);
-      })
-    }
-      }
-  }
+}
 
 </script>
 
