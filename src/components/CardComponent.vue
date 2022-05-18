@@ -1,6 +1,6 @@
 <template>
  <div class="col my-3">
-  <div class="smv-card d-flex flex-column  align-items-center p-2 text-center">
+  <div class="card-music d-flex flex-column  align-items-center p-2 text-center">
     <img :src="card.poster" :alt="card.poster" class="mt-2">
     <h4 class="my-2">{{card.title}}</h4>
     <p>{{card.author}}</p>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name:'CardComp',
+  name:'CardComponent',
   props:{
     card: Object
   }
@@ -26,9 +26,9 @@ export default {
 
 @import '../assets/style/vars';
 
-.smv-card{
+.card-music{
   width: 100%;
-  height: 400px;
+  height: 420px;
   background-color: $primary-color;
   img{
     width: 90%;
